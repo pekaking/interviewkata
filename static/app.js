@@ -15,5 +15,9 @@ console.log("here we go");
  * 
  * 3. The letter 'r' is also very important. Highlight it in the same way, but use the my-orange
  *    color this time.
+ * 
+ * 4. Instead of text with "meaning", the PO wants to have all the words which are placed in paragraph
+ *    tags to be sorted in alphabetical order. Get rid of all the punctuation, just display the words
+ *    in the right order.
  */
 
