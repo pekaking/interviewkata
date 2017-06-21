@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.9.1",
-    "gulp-live-server": "0.0.30",
-    "jquery": "^3.2.1"
+    "gulp-live-server": "0.0.30"
   }
 }
