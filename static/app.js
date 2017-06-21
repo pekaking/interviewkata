@@ -2,7 +2,7 @@ console.log("here we go");
 
 
 /*
- * Hi there and welcome to this little coding kata. Here is what you should do:
+ * Hi there and welcome to this little coding kata. Here is what you should do in javascript:
  * 
  * 1. There is a file on the webserver, named lorem.html. It contains a lot of (html) text. 
  *    Write a javascript function, which fetches the contents of this file asynchronously 
@@ -19,5 +19,7 @@ console.log("here we go");
  * 4. Instead of text with "meaning", the PO wants to have all the words which are placed in paragraph
  *    tags to be sorted in alphabetical order. Get rid of all the punctuation, just display the words
  *    in the right order.
+ * 
+ * Feel free to include any library you want.
  */
 
