@@ -9,11 +9,11 @@ console.log("here we go");
  *    from the server and add the contents into the <div class="container"> div of the website.
  * 
  * 2. There are lots of o's in the imported text. As the letter o is very important for this exercise, 
- *    we should highlight it. Highlight all the o's with a renovero-blue background (see styles.css for 
+ *    we should highlight it. Highlight all the o's with my-blue background (see styles.css for 
  *    more information about that color) and white font color, a 30% bigger font size and add some 
  *    padding so that every o stands out.
  * 
- * 3. The letter 'r' is also very important. Highlight it in the same way, but use the renovero-yellow
+ * 3. The letter 'r' is also very important. Highlight it in the same way, but use the my-orange
  *    color this time.
  */
 
