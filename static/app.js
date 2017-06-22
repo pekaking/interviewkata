@@ -18,8 +18,7 @@ console.log("here we go");
  * 
  * 4. Instead of text with "meaning", the PO wants to have all the words which are placed in paragraph
  *    tags to be sorted in alphabetical order. Get rid of all the punctuation, just display the words
- *    in the right order.
+ *    in the right order. Example: <p>what a requirement</p> becomes <p>a requirement what</p>. 
  * 
- * Feel free to include any library you want.
  */
 
