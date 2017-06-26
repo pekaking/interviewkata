@@ -12,9 +12,3 @@ gulp.task('serve', function() {
         console.debug(timestamp + " change detected");
     });
 });
-
-gulp.task('install', function() {
-    gulp
-    .src('node_modules/jquery/dist/jquery.min.js')
-    .pipe(gulp.dest('static/dist/'));
-});
