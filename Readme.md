@@ -24,4 +24,4 @@ Hello there and welcome to this little coding exercise. I hope you enjoy it :)
 * Commit as if you are working in a highly complex environment with several team members.
 * Feel free to include any library you want.
 * If there is anything missing in the "infrastructure" code - add it.
-* When you finished, you can send me a copy of the project (please include the .git folder)
+* When you finished, please send me the github repository link of your solution
