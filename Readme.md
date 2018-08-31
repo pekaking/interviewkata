@@ -21,7 +21,7 @@ Hello there and welcome to this little coding exercise. I hope you enjoy it :)
 
 * Clone this project.
 * This is a coding exercise; You find all the instructions in the [app.js](static/app.js) File, located in the static folder of this project.
-* Commit as if you are working in a highly complex environment with several team members.
+* Write and commit code as if you would work in a professional environment with several team members.
 * Feel free to include any library you want.
 * If there is anything missing in the "infrastructure" code - add it.
 * When you finished, please send me the github repository link of your solution
