@@ -3,7 +3,7 @@ console.log("here we go");
 
 /*
  * Hi there and welcome to this little coding kata. Here is what you should do in javascript:
- * NOTE: do the exercices step by step
+ * NOTE: do the exercises step by step
  *
  * 1. There is a file on the webserver, named lorem.html. It contains a lot of (html) text. 
  *    Write a javascript function, which fetches the contents of this file asynchronously 
