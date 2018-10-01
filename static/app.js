@@ -9,18 +9,20 @@
         document.querySelector('.container').innerHTML =
             await fetch('./lorem.html')
                 .then(response => response.text())
-                .then(htmlText => highlightLetterO(htmlText));
+                .then(htmlText => highlightLetter(htmlText, 'o', 'blue'))
+                .then(htmlText => highlightLetter(htmlText, 'r', 'orange'));
     };
 
 })();
 
 /*
- * Function that finds the letter O and 
+ * Function that finds the provided letter and 
  * wraps it around in a span with custom css class
  */
-function highlightLetterO(text) {
-    return text.replace(/(o)/gi, '<span class="blue">$1</span>');
-};
+function highlightLetter(text, letter, cssClass){
+    const letterRegex = new RegExp("(" + letter + ")", 'gi');
+    return text.replace(letterRegex, '<span class="' + cssClass + '">$1</span>')
+}
 
 /*
  * Hi there and welcome to this little coding kata. Here is what you should do in javascript:
