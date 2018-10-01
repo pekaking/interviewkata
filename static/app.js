@@ -46,7 +46,7 @@ function removePunctuationAndSortWords(text) {
     if (text) {
         const punctuationRegex = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
         text = text.replace(punctuationRegex, '').split(' ');
-        text.sort((a, b) => a.toLowerCase() !== b.toLowerCase() ? a.toLowerCase() < b.toLowerCase() ? -1 : 1 : 0);
+        text.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
         return text.join(' ');
     }
 }
