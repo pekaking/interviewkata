@@ -1,5 +1,13 @@
-console.log("here we go");
+(() => {
 
+    fetchHtml();
+
+    // Asynchroniously fetch html and display it
+    async function fetchHtml() {
+        document.querySelector('.container').innerHTML = await fetch('./lorem.html').then(response => response.text());
+    };
+
+})();
 
 /*
  * Hi there and welcome to this little coding kata. Here is what you should do in javascript:
