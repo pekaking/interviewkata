@@ -3,14 +3,16 @@
     fillContent();
 
     /*
-     * Asynchroniously fetch html, highlight it and display it
+     * Asynchroniously fetch html, 
+     * order words in <p> tags,
+     * highlight 'o' and 'r',
+     * display the html.
      */
     async function fillContent() {
         document.querySelector('.container').innerHTML =
             await fetch('./lorem.html')
                 .then(response => response.text())
-                .then(htmlText => highlightLetter(htmlText, 'o', 'blue'))
-                .then(htmlText => highlightLetter(htmlText, 'r', 'orange'));
+                .then(htmlText => highlightLetter(highlightLetter(orderParagraphContent(htmlText), 'o', 'blue'), 'r', 'orange'));
     };
 
 })();
@@ -19,9 +21,34 @@
  * Function that finds the provided letter and 
  * wraps it around in a span with custom css class
  */
-function highlightLetter(text, letter, cssClass){
-    const letterRegex = new RegExp("(" + letter + ")", 'gi');
+function highlightLetter(text, letter, cssClass) {
+    const letterRegex = new RegExp('(' + letter + ')', 'gi');
     return text.replace(letterRegex, '<span class="' + cssClass + '">$1</span>')
+}
+
+/*
+ * Function that orders content of <p> tags
+ */
+function orderParagraphContent(text) {
+    const wrapper = document.createElement('wrapper');
+    wrapper.innerHTML = text;
+    const paragraphs = wrapper.getElementsByTagName('p');
+
+    [...paragraphs].forEach(paragraph => paragraph.innerHTML = removePunctuationAndSortWords(paragraph.innerHTML));
+
+    return wrapper.innerHTML;
+}
+
+/*
+ * Function that removes punctuation and sorts words from a text alphabetically
+ */
+function removePunctuationAndSortWords(text) {
+    if (text) {
+        const punctuationRegex = /[\u2000-\u206F\u2E00-\u2E7F\\'!"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/g;
+        text = text.replace(punctuationRegex, '').split(' ');
+        text.sort((a, b) => a.toLowerCase() !== b.toLowerCase() ? a.toLowerCase() < b.toLowerCase() ? -1 : 1 : 0);
+        return text.join(' ');
+    }
 }
 
 /*
