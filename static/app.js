@@ -1,13 +1,26 @@
 (() => {
 
-    fetchHtml();
+    fillContent();
 
-    // Asynchroniously fetch html and display it
-    async function fetchHtml() {
-        document.querySelector('.container').innerHTML = await fetch('./lorem.html').then(response => response.text());
+    /*
+     * Asynchroniously fetch html, highlight it and display it
+     */
+    async function fillContent() {
+        document.querySelector('.container').innerHTML =
+            await fetch('./lorem.html')
+                .then(response => response.text())
+                .then(htmlText => highlightLetterO(htmlText));
     };
 
 })();
+
+/*
+ * Function that finds the letter O and 
+ * wraps it around in a span with custom css class
+ */
+function highlightLetterO(text) {
+    return text.replace(/(o)/gi, '<span class="blue">$1</span>');
+};
 
 /*
  * Hi there and welcome to this little coding kata. Here is what you should do in javascript:
