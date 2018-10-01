@@ -2,3 +2,10 @@
 my blue: 32,55,104
 my orange: 249,180,21
 */
+
+.blue{
+    background-color: rgb(35, 55, 104);
+    color: white;
+    font-size: 1.3em;
+    padding: 5px;
+}
